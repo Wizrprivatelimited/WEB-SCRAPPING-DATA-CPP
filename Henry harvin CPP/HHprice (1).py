@@ -150,70 +150,14 @@ import random
 # Setup undetected Chrome
 options = uc.ChromeOptions()
 options.add_argument("--window-size=1920,1080")
-options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36")
+options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
 
 driver = uc.Chrome(options=options)
 
 urls = [
-"https://www.henryharvin.com/schedule/r-programming-data-science-course#Certification",
-"https://www.henryharvin.com/schedule/russian-language-course",
-"https://www.henryharvin.com/schedule/sales-cloud-consultant",
-"https://www.henryharvin.com/schedule/sales-executive-course",
-"https://www.henryharvin.com/schedule/salesforce-marketing-cloud-email-specialist-certification",
-"https://www.henryharvin.com/schedule/sanskrit-language-course",
-"https://www.henryharvin.com/schedule/sap-fico-training",
-"https://www.henryharvin.com/schedule/sap-mm-sd-integrated-mastery-training",
-"https://www.henryharvin.com/schedule/sap-mm-training",
-"https://www.henryharvin.com/schedule/sap-sd-training",
-"https://www.henryharvin.com/schedule/saving-insurance-scheme-course",
-"https://www.henryharvin.com/schedule/sbi-cbo-exam-prep-course",
-"https://www.henryharvin.com/schedule/scrum-master-exam-preparation-course",
-"https://www.henryharvin.com/schedule/scrum-owner-exam-preparation-course",
-"https://www.henryharvin.com/schedule/scrum-study-agile-master-certified-course",
-"https://www.henryharvin.com/schedule/service-desk-analyst-training",
-"https://www.henryharvin.com/schedule/six-sigma-certification-with-marketing-analytics",
-"https://www.henryharvin.com/schedule/six-sigma-champion-certified",
-"https://www.henryharvin.com/schedule/six-sigma-green-belt-and-black-belt",
-"https://www.henryharvin.com/schedule/six-sigma-green-belt-black-belt-agile-course",
-"https://www.henryharvin.com/schedule/six-sigma-in-it",
-"https://www.henryharvin.com/schedule/social-media-marketing-course",
-"https://www.henryharvin.com/schedule/spanish-creative-writing-advance-level-course",
-"https://www.henryharvin.com/schedule/spanish-creative-writing-beginner-level-course",
-"https://www.henryharvin.com/schedule/spanish-fluency-conversation-course",
-"https://www.henryharvin.com/schedule/spanish-language-course",
-"https://www.henryharvin.com/schedule/spanish-language-course-for-kids",
-"https://www.henryharvin.com/schedule/spc-training",
-"https://www.henryharvin.com/schedule/ssc-chsl-preparation",
-"https://www.henryharvin.com/schedule/startup-generalist-virtual-assistant-training-course",
-"https://www.henryharvin.com/schedule/stock-market-course",
-"https://www.henryharvin.com/schedule/strategy-consulting-course",
-"https://www.henryharvin.com/schedule/supply-chain-management-course",
-"https://www.henryharvin.com/schedule/system-administration-it-infrastructure-services",
-"https://www.henryharvin.com/schedule/tableau-training",
-"https://www.henryharvin.com/schedule/talk-to-me-in-korean-course",
-"https://www.henryharvin.com/schedule/tally-prime-course",
-"https://www.henryharvin.com/schedule/tamil-language-course",
-"https://www.henryharvin.com/schedule/taxation-law-course",
-"https://www.henryharvin.com/schedule/tax-litigation-and-advanced-corporate-taxation-course",
-"https://www.henryharvin.com/schedule/tax-practitioner-course",
-"https://www.henryharvin.com/schedule/tds-practitioner-course",
-"https://www.henryharvin.com/schedule/technical-writing-course",
-"https://www.henryharvin.com/schedule/technology-management-training-program-course",
-"https://www.henryharvin.com/schedule/teen-mba-course",
-"https://www.henryharvin.com/schedule/tefl-course",
-"https://www.henryharvin.com/schedule/torfl-exam-preparation-course",
-"https://www.henryharvin.com/schedule/total-productive-maintenance-tpm-for-production-and-quality-systems-course",
-"https://www.henryharvin.com/schedule/tourism-and-hospitality-professional-course",
-"https://www.henryharvin.com/schedule/trademark-law-course",
-"https://www.henryharvin.com/schedule/trademark-licensing-prosecution-and-litigation-course",
-"https://www.henryharvin.com/schedule/train-the-trainer-course",
-"https://www.henryharvin.com/schedule/us-corporate-law-and-paralegal-studies-course",
-"https://www.henryharvin.com/schedule/us-corporate-law-for-company-secretaries-and-chartered-accountants-course",
-"https://www.henryharvin.com/schedule/us-intellectual-property-law-and-paralegal-studies-course",
-"https://www.henryharvin.com/schedule/vmware-planning-management-operations-training",
-"https://www.henryharvin.com/schedule/workday-finance-integration-service",
-"https://www.henryharvin.com/schedule/workplace-in-diversity-course-seattle",
-"https://www.henryharvin.com/schedule/young-learners-teacher-training",
+
+"https://www.henryharvin.com/schedule/basic-certification-in-hr-generalist-by-iit-guwahati"
+
 # Add more URLs here
 ]
 
@@ -244,7 +188,7 @@ for url in urls:
 driver.quit()
 
 df = pd.DataFrame(data)
-df.to_excel("/Users/romitbenkar/Downloads/henryharvin_courses.xlsx", index=False)
+df.to_excel(r"C:\Users\taslim.siddiqui\Downloads\Scraped_Prices_2.xlsx", index=False)
 
 print("✅ Data saved to henryharvin_courses.xlsx")
 
